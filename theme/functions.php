@@ -6,6 +6,11 @@ function mattwamboldt_setup() {
     add_theme_support('title-tag');
     add_theme_support('automatic-feed-links');
     add_theme_support('menus');
+    add_theme_support('custom-background'); // allows setting the bg in the interface
+    add_theme_support('post-thumbnails'); // feature images per blog post
+    // add_theme_support('custom-header'); // custom header image that you can put somewhere in the theme
+    add_theme_support('post-formats', array('aside', 'image', 'video')); // post formats can be used to display certain posts differently, like a gallery or video
+
     add_editor_style('styles/gutenberg.css');
     register_nav_menu('primary', 'Header Navigation');
     register_nav_menu('footer', 'Footer Bar');
