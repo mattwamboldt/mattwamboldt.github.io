@@ -108,6 +108,18 @@ body > footer {
     }
 }
 
+.home h1 {
+    text-align: center;
+    line-height: 1.6;
+    border-bottom: solid black;
+}
+
+.home h3 {
+    text-align: center;
+    line-height: 1.8;
+    border-bottom: solid black thin;
+}
+
 .pagination {
     padding: 0.75em;
     user-select: none;
