@@ -17,9 +17,11 @@ function mattwamboldt_setup() {
 }
 
 function mattwamboldt_enqueue_scripts() {
+    // the rand here is to ensure we get an actual reload each time. in production you'd use a proper version scheme
+    $themeVersion = rand(0,1000); // '0.1.0'
     wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Open+Sans', array(), null );
-    wp_enqueue_style('main', get_template_directory_uri() . '/styles/main.css', array('fonts'), null);
-    wp_enqueue_script('main', get_template_directory_uri() . '/scripts/main.js', array(), null, true);
+    wp_enqueue_style('main', get_template_directory_uri() . '/styles/main.css', array('fonts'), $themeVersion);
+    wp_enqueue_script('main', get_template_directory_uri() . '/scripts/main.js', array(), $themeVersion, true);
 }
 
 function mattwamboldt_editor_assets() {
