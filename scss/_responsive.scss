@@ -2,6 +2,12 @@
     #main-header {
         .container {
             display: flex;
+
+            .branding .logo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
             
             ul.menu {
                 width: initial;
@@ -10,7 +16,7 @@
                 transform: initial;
                 background: initial;
                 margin-left: auto;
-                font-size: 0.8rem;
+                font-size: 13px;
                 align-items: stretch;
 
                 li {
@@ -27,13 +33,13 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    padding: 0.5rem 0.75rem;
+                    padding: 0.75em 1em;
                 }
 
                 .current-menu-item a, .current-post-item a, .current_page_parent a {
                     border-left: none;
                     border-bottom: solid 4px $brandColor;
-                    padding-bottom: calc(0.5rem - 4px);
+                    padding-bottom: calc(0.75rem - 4px);
                 }
             }
         }
@@ -41,5 +47,37 @@
 
     #hamburger {
         display: none;
+    }
+
+    /* HERO */
+    #hero {
+        padding: 5vw 0.5em;
+
+        .container {
+            min-height: calc(150px + 2em);
+            padding: 3vw;
+
+            p { font-size: 1rem; }
+            img { max-width: 150px; }
+            h1 { font-size: 1.2rem; }
+            .social-links a { font-size: 13px; }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main-header .container ul.menu {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #hero {
+        padding: 72px 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+
+        .container { padding: 43px; }
     }
 }

@@ -3,7 +3,8 @@
     <head>
         <meta charset="<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
         <?php wp_head(); ?>
         <?php if ( is_admin_bar_showing() ): ?>
             <style>
@@ -15,9 +16,16 @@
         <?php endif;?>
     </head>
     <body <?php body_class(); ?>>
-        <header>
+        <header id="main-header">
             <div class='container'>
-                <a id='main-logo' href='/'>MATT WAMBOLDT</a>
+                <div class="branding">
+                    <a class='logo' href='/'>MATT WAMBOLDT</a>
+                    <div id="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
                 <?php
                     $menuOptions = array(
                         'theme_location' => 'primary',

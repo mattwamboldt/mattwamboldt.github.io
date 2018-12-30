@@ -1,0 +1,58 @@
+#hero {
+    background: url('../images/herobg.png') #0F0E0F;
+    background-size: cover;
+    padding: 0.5em;
+}
+
+$imageWidth: 25vw;
+
+#hero .container {
+    padding: 1em;
+    background: rgba(white, 0.85);
+
+    img {
+        width: $imageWidth;
+        border-radius: 50%;
+        border: 2px solid $brandColor;
+        float: left;
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    h1 {
+        margin-top: 0;
+        border-bottom-width: 2px;
+        display: inline-block;
+        font-size: 1em;
+        grid-area: title;
+        text-align: left;
+    }
+
+    p {
+        margin: 0;
+        grid-area: copy;
+        font-size: 14px;
+    }
+    
+    .social-links {
+        margin-top: 1em;
+ 
+        a {
+            display: inline-block;
+            padding: 0.25em 0.75em;
+            background: $mainHeaderBackground;
+            color: $mainHeaderColor;
+            text-decoration: none;
+            font-size: 12px;
+            margin-right: 0.5em;
+
+            i {
+                margin-right: 0.5em;
+            }
+
+            &:hover {
+                background: $menuHighlight;
+            }
+        }
+    }
+}

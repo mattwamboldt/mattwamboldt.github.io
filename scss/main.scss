@@ -18,12 +18,17 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
 @import 'header';
+@import 'hero';
 
 main {
     flex: 1;
