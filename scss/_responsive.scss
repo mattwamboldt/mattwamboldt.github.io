@@ -1,0 +1,45 @@
+@media screen and (min-width: 520px) {
+    #main-header {
+        .container {
+            display: flex;
+            
+            ul.menu {
+                width: initial;
+                display: flex;
+                position: relative;
+                transform: initial;
+                background: initial;
+                margin-left: auto;
+                font-size: 0.8rem;
+                align-items: stretch;
+
+                li {
+                    border-bottom: none;
+                    height: 100%;
+        
+                    &:hover {
+                        background: $menuHighlight;
+                    }
+                }
+
+                a {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 0.5rem 0.75rem;
+                }
+
+                .current-menu-item a, .current-post-item a, .current_page_parent a {
+                    border-left: none;
+                    border-bottom: solid 4px $brandColor;
+                    padding-bottom: calc(0.5rem - 4px);
+                }
+            }
+        }
+    }
+
+    #hamburger {
+        display: none;
+    }
+}
