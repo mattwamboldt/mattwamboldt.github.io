@@ -8,7 +8,7 @@
         <article class="blog-entry">
             <?php the_post_thumbnail('thumbnail'); ?>
             <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-            <small>Posted <?php the_date(); ?> in: <?php the_category(', '); ?></small>
+            <small>Posted <?php echo get_the_date(); ?> in: <?php the_category(', '); ?></small>
             <?php the_excerpt(); ?>
         </article>
     <?php endwhile; ?>
