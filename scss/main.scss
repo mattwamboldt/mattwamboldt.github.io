@@ -4,14 +4,13 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     height: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     display: flex;
     flex-direction: column;
     font-family: $bodyFont;
@@ -31,7 +30,7 @@ img {
 @import 'hero';
 
 main {
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 article {
@@ -54,6 +53,7 @@ body > footer {
     color: $mainHeaderColor;
     padding: 0.75em;
     text-align: center;
+    flex: 0 0 auto;
 
     ul.menu {
         display: flex;

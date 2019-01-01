@@ -20,7 +20,7 @@
             <div class='container'>
                 <div class="branding">
                     <a class='logo' href='/'>MATT WAMBOLDT</a>
-                    <div id="hamburger">
+                    <div id="hamburger" onclick=''>
                         <div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>

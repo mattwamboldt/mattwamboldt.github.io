@@ -26,6 +26,7 @@
 
 #main-header {
     background: $mainHeaderBackground;
+    flex: 0 0 auto;
 
     .container {
         position: relative;
@@ -39,6 +40,7 @@
     }
 
     ul.menu {
+        visibility: hidden;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -95,11 +97,12 @@
             }
 
             .line:nth-child(3) {
-                transform: translate(3px, 1.5px)rotate(-45deg);
+                transform: translate(3px, 1.5px) rotate(-45deg);
             }
         }
 
         ul.menu {
+            visibility: visible;
             transform: translate3d(0, 0, 0);
         }
     }

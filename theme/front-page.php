@@ -1,5 +1,6 @@
 <?php get_header(); ?>
     <section id="hero">
+        <!-- TODO: Cool animated background, code rain and cogs, replicate existing bg, but animated -->
         <div class='container'>
             <img src="<?php echo get_stylesheet_directory_uri() . '/images/profile-square.png'?>" />
             <h1>I'm Matt, I code stuff</h1>
