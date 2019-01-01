@@ -6,7 +6,7 @@
         // template parts are php files that are looked up in the theme, the second param adds a -whatever to the end
         // This function is likely how wordpress handles the template hierarchy or at least some of the same base code ?>
         <article class="blog-entry">
-            <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail('thumbnail'); ?>
             <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             <small>Posted <?php the_date(); ?> in: <?php the_category(', '); ?></small>
             <?php the_excerpt(); ?>
