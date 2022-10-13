@@ -1,0 +1,17 @@
+---
+title: "Optimization Lessons: Branching"
+tag: programming
+---
+I had been reading recently about an optimization that I wanted to try, eliminating branches. This seemed counter-intuitive to me at first. Branching seemed like it would eliminate useless code and save time, but as it turns out it can actually be detrimental. The CPU preloads instructions, but when its going to branch it can’t know what to grab. So instead of stopping it makes a guess as to the result of the branch based on a branch history table and grabs those instructions. When this guess is wrong the CPU has to unload the instructions it had guessed it needed and grab the ones it actually needs. This slows things down. There are tools to detect this, including ones from Intel and assembly instructions to get CPU stats.
+
+Regardless, I wanted to see if removing branching could help on something and I decided to use a function, which is responsible for unpacking a field in bit packed memory. As a note I couldn’t just use a struct mapping as the data layout is not known at compile time, that would have been ideal though.
+
+The algorithm grabs the value one byte at a time in a loop to build the result, then masks away the unwanted bits. I would come to realize later that there was a reason why it was this way. It also checks for 1 byte values in an if. I thought I would just grab an 8 byte value, since the value might straddle integer boundaries, all at once instead of one at a time and shift off what I don’t need. This blew up because the implementation of the function to get data from memory couldn’t be made to work with 8 byte numbers. Then I tried two ints and built it that way. Turns out you can’t dereference pointers whose address is not a multiple of the size of the data type. So then I altered the address to be on 4 byte boundaries, and altered the shifting.
+
+That was when I discovered why it was byte at a time. Endianness. As soon as it became an int the bytes were all flipped and my shifting logic broken. At that point it seemed like it would get weird and longer to add in endian conversions, and it would require a branch to avoid converting when not necessary. I had pretty much given up, but then I realized instead of grabbing data I could grab the raw pointer and build an 8 byte value with shifts the same way the original loop did. Basically unroll the loop. The shifts will take care of any endianness problems, while maintaining my initial idea.
+
+This worked. I was surprised that it did in fact shave off about 125 cycles, which may not seem like much but multiplied over the number of times this is called it is a savings. I looked at the assembly code for it and it’s almost a one to one of commands to instructions, compared to the previous one which was huge. I actually did find it more readable especially with the comments, you get what its doing. The flatness also makes it so that you have to think about less when looking at a certain part of it. Usually with deep nesting you have to know the full control path to understand the problem.
+
+I’d say I learned several lessons from this excursion. You can’t overlook the low level stuff, at some point it does matter. Also It’s hard at first but extremely rewarding to learn, it feels both cool and like what you should have been taught. Control over your data is important. In this case if the packing were 32 bit aligned It would have made the algorithm simpler. Than again the extra space may have been a problem so the ultimate lesson:
+
+Profile Everything.

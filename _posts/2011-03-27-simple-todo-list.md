@@ -1,0 +1,10 @@
+---
+tag: programming
+---
+I decided that I was tired of not having an easy to access list of tasks. I looked online and it’s mostly pay us 45 dollars for this complicated thing, or it’s intricately tied into a calendar program. There are way too many of these apps to begin to choose from so I just made my own in a day or two of work. It’s available in the Utilities section if you want to try it out.
+
+It’s a simple text editor. It reads in a text file with an extension of todo that has a set formatting. It tracks whether you’ve completed something, what it’s priority is, and the task itself. There are three columns in a table view that map to comma separated values in the todo file. It’s a csv really, I just didn’t want all of the clutter and overhead of running a spreadsheet.
+
+That was always the problem I had with other things I tried, they were so overbearing I’d end up going back to paper. I’m still gonna use paper for when I think of something in transit. Since the program uses separate text files, I can have as many as I want and hang on to them for awhile, not sure how well it does with large files, but I could just split them since it is text. I still have sorting to work out, and toggling visibility of completed items, but after that it’s done.
+
+I’m already using it though. I copy the latest build to a C:util directory and set up file associations to open todo files with it. I’ve been using it to keep track of things left to implement. So I edit that todo file with the latest version, check off what’s done, and add the bugs I noticed while doing so. It’s perpetually getting better through use, which is a nice way to develop and get the right usability stuff in there. I have to be careful though. I don’t want it to turn into what I was trying to avoid in the first place.

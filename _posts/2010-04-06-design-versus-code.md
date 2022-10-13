@@ -1,0 +1,8 @@
+---
+tag: programming
+---
+I’ve started reading Code Complete and have realized that the part about using a top down approach and bottom up approach together to architect a system is perfectly right. I noticed this is how I finally managed to come up with a solution to a personal project problem.
+
+I was playing a tabletop RPG with some friends, and it was getting harder and harder for us to find time to get together because we lived so far apart. So I decided it would be worth while to create a program containing all the rules and systems with a simple board that we could play networked, just between us. I was trying to decide how the abilities would work. I started by thinking of how the data looked and decided to use a large structure that I would have a tool to write. Then I decided xml would be better then binary, then the targeting system confused me, then state became a problem. Eventually I almost quit when I stopped and thought how does a player figure out what to do… a script! They follow a set of common steps laid out in slightly differing ways. They need to remember amounts and targets for abilities, variables essentially. A small script language is perfect, it can be written in the language of the game and makes for easy to create user abilities.
+
+I still haven’t finished the game and maybe never will, but it’s a great insight to know that if you take a second to pull yourself out of the specifics and think how something should work from a higher level, it can greatly improve your code.
