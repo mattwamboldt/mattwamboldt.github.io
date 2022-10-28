@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Becoming a Game Programmer"
 tag: game-dev
 ---

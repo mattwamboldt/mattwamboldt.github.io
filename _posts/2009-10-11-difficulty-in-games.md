@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Difficulty in Games"
 tag: game-design
 ---

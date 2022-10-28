@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: default
 title: Projects
+permalink: /projects/
 ---
 <div class='container projects'>
     <h1 class="archive-title">Programs I have written or am actively working on.</h1>
@@ -8,10 +9,12 @@ title: Projects
     <section class='post-grid'>
         {% for project in site.projects %}
         <article class="blog-entry">
-            <a class="thumbnail" href="{{ project.url }}">{{ project.thumbnail }}</a>
+            <a class="thumbnail" href="{{ project.url }}">
+                <img width="150" height="150" src="{{ project.thumbnail }}"/>
+            </a>
             <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
-            <small><strong>Started</strong> {{ project.started }}</small>
-            {{ project.description }}
+            <small><strong>Started</strong> {{ project.date | date: "%B %e, %Y" }}</small>
+            <p>{{ project.description }}</p>
             <a class="btn" href="{{ project.url }}">
                 Read More
             </a>
