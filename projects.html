@@ -1,0 +1,27 @@
+---
+layout: page
+title: Projects
+---
+<div class='container projects'>
+    <h1 class="archive-title">Programs I have written or am actively working on.</h1>
+    <hr />
+    <section class='post-grid'>
+        {% for project in site.projects %}
+        <article class="blog-entry">
+            <a class="thumbnail" href="{{ project.url }}">{{ project.thumbnail }}</a>
+            <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
+            <small><strong>Started</strong> {{ project.started }}</small>
+            {{ project.description }}
+            <a class="btn" href="{{ project.url }}">
+                Read More
+            </a>
+            <a class="btn" href="{{ project.githubUrl }}">
+                <i class="fab fa-github"></i>Github
+            </a>
+            <a class="btn" href="{{ project.downloadUrl }}">
+                <i class="fas fa-download"></i>Download
+            </a>
+        </article>
+        {% endfor %}
+    </section>
+</div>
