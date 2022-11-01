@@ -1,6 +1,7 @@
 ---
 title: "Need for Speed: Most Wanted"
 tag: video-games
+thumbnail: /assets/images/blog/needforspeedmostwanted-1-150x150.jpg
 ---
 Otherwise known as the best Need for Speed game ever made, and my favourite racing game. I’m writing this while gettin’ fired up to some sick 2005 beats. Let’s look back at what made it special.
 

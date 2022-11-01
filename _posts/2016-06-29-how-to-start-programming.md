@@ -1,6 +1,7 @@
 ---
 title: "How to Start Programming"
 tag: programming
+thumbnail: /assets/images/blog/blog-startprogramming-1-150x150.png
 ---
 ## Step #1
 

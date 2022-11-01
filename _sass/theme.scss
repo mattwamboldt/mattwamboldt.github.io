@@ -45,6 +45,23 @@ article {
 
     h1 {
         margin-top: 0;
+        margin-bottom: 0.25em;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        float: left;
+        margin-right: 0.75em; 
+    }
+
+    p {
+        margin-bottom: 0;
+        margin-top: 0.25em;
+    }
+    
+    small {
+        font-style: italic;
     }
 }
 
@@ -141,11 +158,6 @@ body > footer {
     position: absolute !important;
     width: 1px;
     word-wrap: normal !important;
-}
-
-.blog-entry img {
-    max-width: 100%;
-    height: auto;
 }
 
 @import 'projects';

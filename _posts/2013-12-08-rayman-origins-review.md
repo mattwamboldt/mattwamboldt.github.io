@@ -1,6 +1,7 @@
 ---
 title: "Rayman Origins: Style Over Substance"
 tag: video-games
+thumbnail: /assets/images/blog/raymanlegendsblog-1-150x150.jpg
 ---
 The buzz around Rayman Origins at release was huge. People described it as an excellent platformer, whimsical, fun, important. With the release of Legends I realized I had a copy of Origins on the Wii, that had gone unplayed. This morning felt like the perfect time to try it out. Now about 3 hours later, the first ice level is finished and so am I.
 

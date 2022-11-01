@@ -1,6 +1,7 @@
 ---
 title: "Why Not Unity?"
 tags: game-dev programming
+thumbnail: /assets/images/blog/blog-whynotunity-1-150x150.png
 ---
 At some point every developer has to make this decision: Write my own engine or use Unity/UE4/Insert Favourite Engine Here. The decision always depends on your past experience.
 
