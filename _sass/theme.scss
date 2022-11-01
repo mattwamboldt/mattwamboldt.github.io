@@ -1,0 +1,153 @@
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: $bodyFont;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@import 'header';
+@import 'hero';
+
+main {
+    flex: 1 0 auto;
+}
+
+article {
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+}
+
+.blog-entry {
+    background: rgb(245, 245, 245);
+    padding: 0.75em;
+    margin: 1em 0.75em;
+
+    h1 {
+        margin-top: 0;
+    }
+}
+
+body > footer {
+    background: $mainHeaderBackground;
+    color: $mainHeaderColor;
+    padding: 0.75em;
+    text-align: center;
+    flex: 0 0 auto;
+
+    ul.menu {
+        display: flex;
+        padding: 0;
+        padding-bottom: 0.5em;
+        margin: 0;
+        list-style-type: none;
+        justify-content: center;
+        align-self: stretch;
+        align-items: stretch;
+    
+        a {
+            color: $mainHeaderColor;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height:100%;
+            font-size: 0.75em;
+            padding: 0 0.75em;
+    
+            &:hover {
+                background: lighten($mainHeaderBackground, 15%);
+            }
+        }
+    }
+}
+
+.home h1 {
+    text-align: center;
+    line-height: 1.6;
+    border-bottom: solid black;
+}
+
+.home h3 {
+    text-align: center;
+    line-height: 1.8;
+    border-bottom: solid black thin;
+}
+
+.pagination {
+    padding: 0.75em;
+    user-select: none;
+
+    &:last-child {
+        margin-bottom: 1em;
+    }
+
+    &:first-child {
+        margin-top: 1em;
+    }
+
+    .page-numbers {
+        display: inline-block;
+        background: $mainHeaderBackground;
+        color: $mainHeaderColor;
+        padding: 0.5em;
+        text-decoration: none;
+        user-select: none;
+    }
+
+    .page-numbers.current {
+        background: #67ac53;
+    }
+
+    a.page-numbers:hover {
+        background: lighten($mainHeaderBackground, 15%);
+    }
+
+    .dots {
+        background: initial;
+        color: initial;
+    }
+}
+
+// Needed for some wordpress output content
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.blog-entry img {
+    max-width: 100%;
+    height: auto;
+}
+
+@import 'projects';
+
+@import 'responsive';
