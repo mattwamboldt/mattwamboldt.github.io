@@ -1,7 +1,61 @@
 ---
 layout: base
-# TODO: Clean up post list to limit it per whats live
+#TODO: Make nav show up nicer when js is disabled
 ---
+<section id="project-carosel" class="feature carosel">
+  {%- for project in site.projects reversed -%}
+    {% assign class = '' %}
+    {% if forloop.first %}
+    {% assign class = 'active' %}
+    {% endif %}
+    <div class="backdrop {{ class }}" id="backdrop-{{ forloop.index0 }}" style="background-image: url('{{project.backdrop}}');" ></div>
+    <article class="project {{ class }} container" id="project-{{ forloop.index0 }}">
+      {% if project.preview %}
+      <div class="thumbnail"><video loop autoplay muted src="{{ project.preview }}"></video></div>
+      {% else %}
+      <a class="thumbnail" href="{{ project.url }}" style="background-image: url('{{project.thumbnail}}');"></a>
+      {% endif %}
+      <div class="info">
+        <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
+        <small><strong>Started</strong> {{ project.date | date: "%B %e, %Y" }}</small>
+        <p>{{ project.description }}</p>
+        <nav>
+          <a class="btn" href="{{ project.url }}">Read More</a>
+          <a class="btn" href="{{ project.githubUrl }}"><i class="fab fa-github"></i>Github</a>
+          <a class="btn" href="{{ project.downloadUrl }}"><i class="fas fa-download"></i>Download</a>
+        </nav>
+      </div>
+    </article>
+  {%- endfor -%}
+  <h1>Active Projects</h1>
+  <div class="nav-dots">
+    {%- for project in site.projects -%}
+      {% assign class = 'dot' %}
+      {% if forloop.first %}
+        {% assign class = 'dot active' %}
+      {% endif %}
+      <div class="{{ class }}" data-index="{{ forloop.index0 }}"></div>
+    {%- endfor -%}
+  </div>
+</section>
+<section id="blogroll" class='container'>
+    {%- if site.posts.size > 0 -%}
+      <h1 class="post-list-heading">{{ page.list_title | default: "Latest Blog Posts" }}</h1>
+      {%- for post in site.posts limit:3 -%}
+      <article class="blog-entry">
+        {% if post.thumbnail %}
+        <img width="150" height="150" src="{{post.thumbnail}}" />
+        {% endif %}
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <small>Posted {{ post.date | date: "%B %e, %Y" }}</small>
+        {{ post.excerpt }}
+        <div style="clear: both;"></div>
+      </article>
+      {%- endfor -%}
+  
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    {%- endif -%}
+</section>
 <section id="hero">
     <!-- TODO: Cool animated background, code rain and cogs,
          replicate original bg, but animated -->
@@ -16,26 +70,3 @@ layout: base
         </nav>
     </div>
 </section>
-<div class='container'>
-    {%- if site.posts.size > 0 -%}
-      <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-      <ul class="post-list">
-        {%- for post in site.posts -%}
-        <li>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
-  
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-    {%- endif -%}
-</div>
