@@ -3,6 +3,7 @@ layout: base
 #TODO: Make nav show up nicer when js is disabled
 ---
 <section id="project-carosel" class="feature carosel">
+  <h1>Active Projects</h1>
   {%- for project in site.projects reversed -%}
     {% assign class = '' %}
     {% if forloop.first %}
@@ -27,7 +28,6 @@ layout: base
       </div>
     </article>
   {%- endfor -%}
-  <h1>Active Projects</h1>
   <div class="nav-dots">
     {%- for project in site.projects -%}
       {% assign class = 'dot' %}

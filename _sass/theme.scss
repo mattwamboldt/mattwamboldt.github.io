@@ -174,13 +174,13 @@ body > footer {
 
 .carosel {
     position: relative;
-    padding: 4.5rem 0.5em 4.5rem 0.5em;
+    padding: 0 0.5em 4.5rem 0.5em;
     background-color: #0F0E0F;
     overflow: hidden;
 
     & > h1 {
         color: $mainHeaderColor;
-        position: absolute;
+        position: relative;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -189,6 +189,8 @@ body > footer {
         padding: 0.5rem;
         border-radius: 5px;
         line-height: 1;
+        z-index: 12;
+        width: fit-content;
     }
 
     .project {
@@ -199,6 +201,7 @@ body > footer {
         display: none;
         padding: 1rem;
         z-index: 10;
+        flex-direction: column;
 
         .thumbnail {
             display: block;
@@ -206,7 +209,7 @@ body > footer {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            flex-basis: 720px;
+            flex-basis: 200px;
             aspect-ratio: 720 / 404;
 
             video {
@@ -239,7 +242,7 @@ body > footer {
         }
 
         .info {
-            padding-left: 1rem;
+            padding-top: 1rem;
             flex: 1;
             display: flex;
             flex-direction: column;

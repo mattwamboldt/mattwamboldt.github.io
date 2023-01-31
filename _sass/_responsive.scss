@@ -64,6 +64,19 @@
             .social-links a { font-size: 13px; }
         }
     }
+
+    .carosel .project {
+        flex-direction: row;
+
+        .thumbnail {
+            flex-basis: 720px;
+        }
+
+        .info {
+            padding-top: 0;
+            padding-left: 1rem;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
