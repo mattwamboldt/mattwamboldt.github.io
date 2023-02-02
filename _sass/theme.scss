@@ -200,7 +200,8 @@ body > footer {
     & > footer {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 2em;
+        align-items: center;
+        margin-bottom: 1em;
 
         p {
             margin: 0;
