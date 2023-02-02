@@ -55,7 +55,7 @@
         padding: 5vw 0.5em;
 
         .container {
-            min-height: calc(150px + 2em);
+            min-height: calc(150px + 6vw);
             padding: 3vw;
 
             p { font-size: 1rem; }
@@ -92,6 +92,9 @@
         background-repeat: no-repeat;
         background-position: top center;
 
-        .container { padding: 43px; }
+        .container {
+            padding: 43px;
+            min-height: calc(150px + 86px);
+        }
     }
 }
