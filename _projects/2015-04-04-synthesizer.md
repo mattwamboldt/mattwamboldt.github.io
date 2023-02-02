@@ -1,11 +1,11 @@
 ---
 title: Synthesizer
-date: 2015-04-04
 description: This began as an attempt to learn about audio programming and is slowly transforming into a full audio system, with midi, recording, and effects.
 githubUrl: https://github.com/mattwamboldt/synthesizer
 downloadUrl: https://github.com/mattwamboldt/synthesizer/releases
 thumbnail: /assets/images/projects/synthesizer-thumbnail.jpg
 backdrop: /assets/images/projects/synthesizer-backdrop.jpg
+lastRelease: 2016-03-24
 ---
 This began as an attempt to learn about audio programming and is slowly transforming into a full audio system, with midi, recording, and effects. Much of the lower level synthesis code is based on The Audio Programming Book, by Richard Boulanger and Victor Lazzarini.  It’s written in C++ on top of the SDL, which I can ignore things like ASIO and ALSA. The current build shows a blank screen and turns any key presses into midi signals for playing notes.
 

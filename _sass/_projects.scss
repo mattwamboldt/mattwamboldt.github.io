@@ -42,27 +42,8 @@
         }
 
         a.btn {
-            display: block;
-            background: $mainHeaderBackground;
-            color: $mainHeaderColor;
-            padding: 0.25rem 0.5rem;
-            text-decoration: none;
-            border: inset 3px lighten($mainHeaderBackground, 20%);
             margin-top: 0.5rem;
             font-size: 0.9rem;
-
-            &:hover {
-                background: lighten($mainHeaderBackground, 5%);
-            }
-
-            &:active {
-                border: none;
-                padding: calc(0.25rem + 3px) calc(0.5rem + 3px);
-            }
-
-            i {
-                margin-right: 0.5rem;
-            }
         }
     }
 }

@@ -1,12 +1,12 @@
 ---
 title: Tic Tac Woah
-date: 2016-02-01
 description: A pumped up version of Tic Tac Toe written in C++ with SDL. It was made with a one month hard limit. Based on Game Coding Complete.
 githubUrl: https://github.com/mattwamboldt/tictacwoah
 downloadUrl: https://github.com/mattwamboldt/tictacwoah/releases
 thumbnail: /assets/images/projects/tictacwoah-thumbnail.png
 backdrop: /assets/images/projects/tictacwoah-backdrop.png
 preview: /assets/images/projects/tictacwoah-preview.mp4
+lastRelease: 2016-02-27
 ---
 Tic Tac Woah is a pumped up version of Tic Tac Toe. It was made with a one month hard limit. The AI isn’t finished and the volume controls don’t work, but it’s more stamina than I thought I’d have for Tic Tac Toe.
 

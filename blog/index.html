@@ -8,21 +8,21 @@ title: Blog
 <nav class="navigation pagination" role="navigation" aria-label="Posts">
   <div class="nav-links">
   {% if paginator.previous_page %}
-    <a class="prev page-numbers" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+    <a class="btn prev page-numbers" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
       <span aria-current="page" class="page-numbers current">{{ page }}</span>
     {% elsif page == 1 %}
-      <a class="page-numbers" href="{{ '/blog' | relative_url }}">{{ page }}</a>
+      <a class="btn page-numbers" href="{{ '/blog' | relative_url }}">{{ page }}</a>
     {% else %}
-      <a class="page-numbers" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      <a class="btn page-numbers" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a class="next page-numbers" href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    <a class="btn next page-numbers" href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
   {% endif %}
   </div>
 </nav>

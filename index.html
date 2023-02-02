@@ -18,7 +18,10 @@ layout: base
       {% endif %}
       <div class="info">
         <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
-        <small><strong>Started</strong> {{ project.date | date: "%B %e, %Y" }}</small>
+        <small><strong>Started:</strong> {{ project.date | date: "%B %e, %Y" }}</small>
+        {% if project.lastRelease %}
+        <small><strong>Last Release:</strong> {{ project.lastRelease | date: "%B %e, %Y" }}</small>
+        {% endif %}
         <p>{{ project.description }}</p>
         <nav>
           <a class="btn" href="{{ project.url }}">Read More</a>
@@ -38,11 +41,11 @@ layout: base
     {%- endfor -%}
   </div>
 </section>
-<section id="blogroll" class='container'>
+<section id="blogroll">
     {%- if site.posts.size > 0 -%}
       <h1 class="post-list-heading">{{ page.list_title | default: "Latest Blog Posts" }}</h1>
       {%- for post in site.posts limit:3 -%}
-      <article class="blog-entry">
+      <article class="blog-entry container">
         {% if post.thumbnail %}
         <img width="150" height="150" src="{{post.thumbnail}}" />
         {% endif %}
@@ -52,8 +55,11 @@ layout: base
         <div style="clear: both;"></div>
       </article>
       {%- endfor -%}
-  
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+      <footer class="container">
+        <a class="btn" href="/blog">Read More</a>
+        <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+      </footer>
     {%- endif -%}
 </section>
 <section id="hero">
@@ -64,9 +70,9 @@ layout: base
         <h1>I'm Matt, I code stuff</h1>
         <p>{{ site.description }}</p>
         <nav class="social-links">
-            <a href="https://github.com/mattwamboldt" alt="GitHub"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/mattwamboldt/" alt="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://twitter.com/mattwamboldt" alt="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+            <a class="btn" href="https://github.com/mattwamboldt" alt="GitHub"><i class="fab fa-github"></i> GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/mattwamboldt/" alt="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a class="btn" href="https://twitter.com/mattwamboldt" alt="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
         </nav>
     </div>
 </section>

@@ -1,0 +1,131 @@
+.carosel {
+    position: relative;
+    padding: 0 0.5em 4.5rem 0.5em;
+    background-color: #0F0E0F;
+    overflow: hidden;
+
+    & > h1 {
+        color: $mainHeaderColor;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        background: rgba(0, 0, 0, 0.85);
+        padding: 0.5rem;
+        border-radius: 5px;
+        line-height: 1;
+        z-index: 12;
+        width: fit-content;
+    }
+
+    .project {
+        max-width: 1000px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 5px;
+        position: relative;
+        display: none;
+        padding: 1rem;
+        z-index: 10;
+        flex-direction: column;
+
+        .thumbnail {
+            display: block;
+            line-height: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-basis: 200px;
+            aspect-ratio: 720 / 404;
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &.active {
+            display: flex;
+        }
+
+        .btn {
+            margin-top: 0.5em;
+        }
+
+        .info {
+            padding-top: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            
+            h1 {
+                min-width: 250px;
+                margin-top: 0;
+                white-space: nowrap;
+            }
+
+            nav {
+                margin-top: auto;
+            }
+
+            small {
+                font-style: italic;
+                line-height: 1.5;
+            }
+
+            strong {
+                font-style: normal;
+                padding-right: 3px;
+            }
+        }
+    }
+
+    .backdrop {
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+        filter: blur(2px);
+
+        &.active {
+            opacity: 0.5;
+        }
+    }
+
+    .nav-dots {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .dot {
+        width: 14px;
+        height: 14px;
+        margin: 5px;
+        border: 1px solid white;
+        background-color: black;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+        }
+
+        &.active {
+            background-color: $brandColor;
+            cursor: default;
+            pointer-events: none;
+        }
+
+    }
+}
