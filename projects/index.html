@@ -13,7 +13,8 @@ permalink: /projects/
                 <img width="150" height="150" src="{{ project.thumbnail }}"/>
             </a>
             <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
-            <small><strong>Started</strong> {{ project.date | date: "%B %e, %Y" }}</small>
+            <small><strong>Started:</strong> {{ project.startDate | date: "%B %e, %Y" }}</small>
+            <small><strong>Last Release:</strong> {{ project.date | date: "%B %e, %Y" }}</small>
             <p>{{ project.description }}</p>
             <a class="btn" href="{{ project.url }}">
                 Read More

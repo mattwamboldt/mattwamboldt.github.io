@@ -6,7 +6,8 @@ downloadUrl: https://github.com/mattwamboldt/rasterizer/releases
 thumbnail: /assets/images/projects/rasterizer-thumbnail.png
 backdrop: /assets/images/projects/rasterizer-backdrop.jpg
 preview: /assets/images/projects/rasterizer-preview.mp4
-lastRelease: 2016-03-27
+startDate: 2015-09-09
+date: 2016-03-27
 ---
 After years of being a game programmer I was tired of not fully understanding 3D rendering. Most books were obtuse and hard to follow. They treated many aspects of the pipeline as magic to take for granted. In the immortal words of Richard Feynman “What I cannot create, I do not understand.” So I set out to create and learned just how simple it actually was.
 

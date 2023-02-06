@@ -18,10 +18,8 @@ layout: base
       {% endif %}
       <div class="info">
         <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
-        <small><strong>Started:</strong> {{ project.date | date: "%B %e, %Y" }}</small>
-        {% if project.lastRelease %}
-        <small><strong>Last Release:</strong> {{ project.lastRelease | date: "%B %e, %Y" }}</small>
-        {% endif %}
+        <small><strong>Started:</strong> {{ project.startDate | date: "%B %e, %Y" }}</small>
+        <small><strong>Last Release:</strong> {{ project.date | date: "%B %e, %Y" }}</small>
         <p>{{ project.description }}</p>
         <nav>
           <a class="btn" href="{{ project.url }}">Read More</a>
