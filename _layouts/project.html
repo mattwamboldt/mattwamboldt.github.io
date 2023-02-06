@@ -5,7 +5,7 @@ layout: default
     <h1>{{ page.title | escape }}</h1>
     <p>
         <small><strong>Started:</strong> {{ page.startDate | date: "%B %e, %Y" }}</small>
-        <small><strong>Last Release:</strong> {{ page.date | date: "%B %e, %Y" }}</small>
+        <small><strong>Last Release:</strong> {{ page.lastRelease | date: "%B %e, %Y" }}</small>
     </p>
     {{ content }}
 </article>

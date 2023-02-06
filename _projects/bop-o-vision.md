@@ -2,12 +2,13 @@
 title: Bop-O-Vision
 description: Web based music player and visualizer, inspired by old apps like WinAmp.
 githubUrl: https://github.com/mattwamboldt/bop-o-vision
-downloadUrl: https://github.com/mattwamboldt/bop-o-vision/releases
+liveUrl: https://mattwamboldt.com/bop-o-vision/
 thumbnail: /assets/images/projects/bop-o-vision-thumbnail.png
 backdrop: /assets/images/projects/bop-o-vision-backdrop.png
 preview: /assets/images/projects/bop-o-vision-preview.mp4
 date: 2020-02-01
 startDate: 2019-11-02
+lastRelease: 2020-02-01
 ---
 
 Sometimes you get nostalgic and on this occasion I was remembering the days of dedicated music software.
@@ -46,7 +47,7 @@ It just makes things less harsh.
 
 We can get two things out of AnalyserNode which are shown in the first two visualizers:
 - **Time:** The raw waveform for the last time slice, think an oscilloscope. Draws a set of line segments,
-left to right, with y of each point scaled by amplitude and canvas height.
+left to right, with the y of each point scaled by amplitude and canvas height.
 - **Frequency:** The frequencies found by the FFT and how loud they are, think of an equalizer. Drawn
 as a bar graph with amplitude being the height of each bar.
 

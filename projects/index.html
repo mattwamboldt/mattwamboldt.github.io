@@ -14,17 +14,16 @@ permalink: /projects/
             </a>
             <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
             <small><strong>Started:</strong> {{ project.startDate | date: "%B %e, %Y" }}</small>
-            <small><strong>Last Release:</strong> {{ project.date | date: "%B %e, %Y" }}</small>
+            <small><strong>Last Release:</strong> {{ project.lastRelease | date: "%B %e, %Y" }}</small>
             <p>{{ project.description }}</p>
-            <a class="btn" href="{{ project.url }}">
-                Read More
-            </a>
-            <a class="btn" href="{{ project.githubUrl }}">
-                <i class="fab fa-github"></i>Github
-            </a>
-            <a class="btn" href="{{ project.downloadUrl }}">
-                <i class="fas fa-download"></i>Download
-            </a>
+            <a class="btn" href="{{ project.url }}">Read More</a>
+            <a class="btn" href="{{ project.githubUrl }}"><i class="fab fa-github"></i>Github</a>
+            {% if project.liveUrl %}
+            <a class="btn" href="{{ project.liveUrl }}" target="_blank"><i class="fas fa-play"></i>View</a>
+            {% endif %}
+            {% if project.downloadUrl %}
+            <a class="btn" href="{{ project.downloadUrl }}"><i class="fas fa-download"></i>Download</a>
+            {% endif %}
         </article>
         {% endfor %}
     </section>
