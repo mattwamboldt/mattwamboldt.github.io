@@ -12,7 +12,7 @@ layout: base
     <div class="backdrop {{ class }}" id="backdrop-{{ forloop.index0 }}" style="background-image: url('{{project.backdrop}}');" ></div>
     <article class="project {{ class }} container" id="project-{{ forloop.index0 }}">
       {% if project.preview %}
-      <div class="thumbnail"><video loop autoplay muted src="{{ project.preview }}"></video></div>
+      <div class="thumbnail"><video loop autoplay muted controls controlsList="nodownload noremoteplayback" src="{{ project.preview }}"></video></div>
       {% else %}
       <a class="thumbnail" href="{{ project.url }}" style="background-image: url('{{project.thumbnail}}');"></a>
       {% endif %}
