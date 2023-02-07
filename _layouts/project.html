@@ -2,8 +2,8 @@
 layout: default
 ---
 <article class="project-page">
-    <h1>{{ page.title | escape }}</h1>
-    <p>
+    <h1 class="post-list-heading">{{ page.title | escape }}</h1>
+    <p style="text-align: center;">
         <small><strong>Started:</strong> {{ page.startDate | date: "%B %e, %Y" }}</small>
         <small><strong>Last Release:</strong> {{ page.lastRelease | date: "%B %e, %Y" }}</small>
     </p>
