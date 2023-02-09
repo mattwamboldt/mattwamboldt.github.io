@@ -1,7 +1,7 @@
 ---
 title: "How to Start Programming"
 tag: programming
-thumbnail: /assets/images/blog/blog-startprogramming-1-150x150.png
+image: /assets/images/blog/blog-startprogramming-1-150x150.png
 ---
 
 Like with anything in life, starting is the hardest part. Here's my advice to new programers or anyone starting a new project.

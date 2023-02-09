@@ -29,8 +29,8 @@ title: Blog
 {% endif %}
 {% for post in paginator.posts %}
 <article class="blog-entry">
-  {% if post.thumbnail %}
-  <img width="150" height="150" src="{{post.thumbnail}}" />
+  {% if post.image %}
+  <img width="150" height="150" src="{{post.image}}" />
   {% endif %}
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <small>Posted {{ post.date | date: "%B %e, %Y" }}</small>

@@ -3,7 +3,7 @@ title: Synthesizer
 description: This began as an attempt to learn about audio programming and is slowly transforming into a full audio system, with midi, recording, and effects.
 githubUrl: https://github.com/mattwamboldt/synthesizer
 downloadUrl: https://github.com/mattwamboldt/synthesizer/releases
-thumbnail: /assets/images/projects/synthesizer-thumbnail.jpg
+image: /assets/images/projects/synthesizer-thumbnail.jpg
 backdrop: /assets/images/projects/synthesizer-backdrop.jpg
 startDate: 2015-04-04
 lastRelease: 2016-03-24

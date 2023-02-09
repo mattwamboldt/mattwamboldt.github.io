@@ -1,5 +1,6 @@
 ---
 layout: base
+image: /assets/images/profile-square.png
 #TODO: Make nav show up nicer when js is disabled
 ---
 <section id="project-carosel" class="feature carosel">
@@ -14,7 +15,7 @@ layout: base
       {% if project.preview %}
       <div class="thumbnail"><video loop autoplay muted controls controlsList="nodownload noremoteplayback" src="{{ project.preview }}"></video></div>
       {% else %}
-      <a class="thumbnail" href="{{ project.url }}" style="background-image: url('{{project.thumbnail}}');"></a>
+      <a class="thumbnail" href="{{ project.url }}" style="background-image: url('{{project.image}}');"></a>
       {% endif %}
       <div class="info">
         <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
@@ -49,8 +50,8 @@ layout: base
       <h1 class="post-list-heading">{{ page.list_title | default: "Latest Blog Posts" }}</h1>
       {%- for post in site.posts limit:3 -%}
       <article class="blog-entry container">
-        {% if post.thumbnail %}
-        <img width="150" height="150" src="{{post.thumbnail}}" />
+        {% if post.image %}
+        <img width="150" height="150" src="{{post.image}}" />
         {% endif %}
         <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
         <small>Posted {{ post.date | date: "%B %e, %Y" }}</small>

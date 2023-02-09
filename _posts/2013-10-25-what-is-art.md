@@ -1,7 +1,7 @@
 ---
 title: "What is Art?"
 tag: game-design
-thumbnail: /assets/images/blog/whatisartblog-1-150x150.jpg
+image: /assets/images/blog/whatisartblog-1-150x150.jpg
 ---
 This question came up in conversation the other day, and got me searching for the answer. It may not seem relevant to games at first. Bear with me and we’ll bring it back around.
 

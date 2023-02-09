@@ -3,7 +3,7 @@ title: Rasterizer
 description: After years of game dev I was tired of not fully understanding 3D rendering. So I set out to create a renderer and learned just how simple it actually was.
 githubUrl: https://github.com/mattwamboldt/rasterizer
 downloadUrl: https://github.com/mattwamboldt/rasterizer/releases
-thumbnail: /assets/images/projects/rasterizer-thumbnail.png
+image: /assets/images/projects/rasterizer-thumbnail.png
 backdrop: /assets/images/projects/rasterizer-backdrop.jpg
 preview: /assets/images/projects/rasterizer-preview.mp4
 startDate: 2015-09-09

@@ -3,7 +3,7 @@ title: Bop-O-Vision
 description: Web based music player and visualizer, inspired by old apps like WinAmp.
 githubUrl: https://github.com/mattwamboldt/bop-o-vision
 liveUrl: https://mattwamboldt.com/bop-o-vision/
-thumbnail: /assets/images/projects/bop-o-vision-thumbnail.png
+image: /assets/images/projects/bop-o-vision-thumbnail.png
 backdrop: /assets/images/projects/bop-o-vision-backdrop.png
 preview: /assets/images/projects/bop-o-vision-preview.mp4
 date: 2020-02-01

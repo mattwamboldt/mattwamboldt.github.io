@@ -1,7 +1,7 @@
 ---
 title: "FF7: *Spoilers* Aerith"
 tags: game-design video-games
-thumbnail: /assets/images/blog/blog-aerith-1-150x150.png
+image: /assets/images/blog/blog-aerith-1-150x150.png
 ---
 Her death is a powerful moment for many players, but why? I personally didn’t care when it happened because she felt very one dimensional and I wasn’t invested in her character. However I can understand why other players would care.
 

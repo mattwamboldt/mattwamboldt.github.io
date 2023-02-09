@@ -3,7 +3,7 @@ title: ROMulus (NES Emulator)
 description: An Emulator for old consoles built as low level as possible, without third party libraries. Started with the NES and more consoles to come.
 githubUrl: https://github.com/mattwamboldt/romulus
 downloadUrl: https://github.com/mattwamboldt/romulus/releases
-thumbnail: /assets/images/projects/romulus-thumbnail.png
+image: /assets/images/projects/romulus-thumbnail.png
 backdrop: /assets/images/projects/romulus-backdrop.png
 preview: /assets/images/projects/romulus-preview.mp4
 startDate: 2020-05-07

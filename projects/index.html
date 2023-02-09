@@ -9,7 +9,7 @@ permalink: /projects/
         {% for project in site.projects reversed %}
         <article class="blog-entry">
             <a class="thumbnail" href="{{ project.url }}">
-                <img width="150" height="150" src="{{ project.thumbnail }}"/>
+                <img width="150" height="150" src="{{ project.image }}"/>
             </a>
             <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
             <small><strong>Started:</strong> {{ project.startDate | date: "%B %e, %Y" }}</small>
