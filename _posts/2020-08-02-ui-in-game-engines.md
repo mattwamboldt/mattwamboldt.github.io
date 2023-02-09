@@ -1,6 +1,8 @@
 ---
 title: "A Perspective on UI in Game Engines"
 tag: programming
+excerpt: How I think about the architecture of UI systems for games and why so many get it wrong.
+thumbnail: /assets/images/blog/ui-in-game-engines.jpg
 ---
 *Note: Wrote this about five years ago but still agree with the general conclusion.*
 

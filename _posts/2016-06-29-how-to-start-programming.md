@@ -3,6 +3,9 @@ title: "How to Start Programming"
 tag: programming
 thumbnail: /assets/images/blog/blog-startprogramming-1-150x150.png
 ---
+
+Like with anything in life, starting is the hardest part. Here's my advice to new programers or anyone starting a new project.
+
 ## Step #1
 
 **Figure out what you want to make.** The first step to any program is figuring out what you want the program to do. You don’t need to know everything but you do need to know the basics. Will it be a game? Will it be a command line utility? What does it let people do? How will people do it?
