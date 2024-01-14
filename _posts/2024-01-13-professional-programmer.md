@@ -43,9 +43,9 @@ and ensure code quality.
 ## 4. You are not too smart to ask questions
 Speaking of being only human, many programmers have a sore spot when it comes to being seen as stupid,
 or not knowing something. Maybe because a lot of us grew up as "gifted" kids saddled with the expectation
-that we know everything, or you need an ego the size of a semi-truck to withstand the constant failure
-of this job, either way it's a pattern. This is something you'll need to work past to be successful
-long term.
+that we know everything, or you need an ego the size of a semi-truck to withstand the constant mistakes
+and setbacks when getting code to work, either way it's a pattern. This is something you'll need to work
+past to be successful long term.
 
 Firstly because you can't know what you don't know. Even on a solo project you'll have to search for
 answers to the questions you have and this isn't a sign of weakness or stupidity. You weren't expected
